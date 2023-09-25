@@ -1,0 +1,1 @@
+print(f"The sorted list {sorted(l)} using insertion sort is : {ins(l)}")
