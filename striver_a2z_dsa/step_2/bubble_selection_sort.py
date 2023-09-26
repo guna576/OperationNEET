@@ -1,9 +1,13 @@
 
+# It takes O(N) auxilary space but for best case it runs for O(N) times 
 def bub_rec(l, n):
     if n < 0: return l 
+    swap = False
     for i in range(n):
-        if l[i] > l[i+1]: l[i],l[i+1] = l[i+1], l[i]
-
+        if l[i] > l[i+1]: 
+            l[i],l[i+1] = l[i+1], l[i]
+            swap = True 
+    if not swap: return l
     return bub_rec(l,n-1)
 
 
