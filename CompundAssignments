@@ -1,6 +1,8 @@
 
-when i was solving a problem related to datatypes , i got an issue
-git 
+when i was solving a problem related to datatypes , i got an issue with datatypes.
+
+lets see it in detail :
+
  example x is int and y is long type and i did operation on x with the help of y like
 
  x=x%y i got and error because the datatype of x is int . (i need to do manual typecast of long to int and then i can perform modulo operation)
