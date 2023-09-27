@@ -12,7 +12,7 @@ lets see it in detail :
 
  I was shocked by the above change and delved into compound assignments .
 
-About Compound statements : 
+About Compound Assignments : 
 
 ✔ in the case of compound assignment operators internally type-casting will be performed automatically,
 (There may be a data loss as bigger one is assigned to smaller ones).
