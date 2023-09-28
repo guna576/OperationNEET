@@ -1,0 +1,16 @@
+
+
+if question states to complete your logic in 1 second it means the maximum vaue of n is 10^8  and if it is 2 seconds then it is 2*10^8
+
+
+if t = 1 sec , N=10^8
+
+if t = 2 sec , N=2*10^8
+
+
+Few other things about different complexities :
+
+Big O notation :  Upper Bound  (Best Case complexities)
+Theta Notation : between upper and lower bound   (Average case complexities)
+Omega notation : lower bound  (Worst Case complexities)
+
