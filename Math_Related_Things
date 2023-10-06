@@ -1,0 +1,16 @@
+Question is to  break  a positive into the sum of k positive integers, where k >= 2, and maximize the product of those integers.
+
+
+Mathematical involved here :  we will get maximum product only when we split given number into 2  and 3 .
+
+Proof :   lets say n=ax where n is final result x is k positive integer and a is muliple of a number .
+
+f(x) = x power(n/x)
+
+take derivation of it you will get x as 2.7 which near to 3.
+
+
+Example :  10 as 3*3*4    ,   20 as 3*3*3*3*3*3*3*2
+
+
+Try for different testcase to get more clarity on this observation.
