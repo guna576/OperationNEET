@@ -1,0 +1,31 @@
+What are abstract classes and interfaces? Which of them provides more abstraction?
+
+How would you implement Multiple Inheritance in Java and C++?
+
+
+upcasting : normally creating subclass object and call subclass functions .(implicit one no need to do anything from our side)
+
+DownCasting : Downcasting is the opposite of upcasting. It involves explicitly casting an object of the superclass back to its original subclass.
+This is done when you want to access methods or fields specific to the subclass that are not present in the superclass. 
+
+EXAMPLE :
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+
+UPCASTING :  Animal myDog = new Dog(); // Upcasting
+myDog.makeSound(); // Calls the overridden method in Dog class
+
+DOWNCASTING : Animal myAnimal = new Dog(); // Upcasting
+Dog myDog = (Dog) myAnimal; // Downcasting
+myDog.makeSound(); // Calls the overridden method in Dog class
