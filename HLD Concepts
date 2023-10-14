@@ -1,13 +1,13 @@
 1. WebSockets
 2. Polling (short polling, long polling)
 3. Polling vs web sockets
-4. Server Side events (SSE)
+4. Server Side events (SSE)---realtime serviceside datastreaming happens
 5. HTTPs, HTTP (Get put post..)
 6. REST vs GraphQL
 7. Message Queues (pub - sub pattern)
 8. Proxy (Forward / Reverse proxy)
 9. Load balancing (Reverse Proxies)
-10. Horizontal and vertical scaling
+10. Horizontal and vertical scaling ----  
 11. Latency and throughput
 12. CAP Theorem
 13. Consistent hasing
@@ -20,3 +20,15 @@
 20. Paging & filtering
 21. Rate limiting
 22. Logging & Monitoring
+
+websocketing is used for client server communication.
+
+Polling is another way of communication between them .  Long and short polling is based on some time (interval time)
+(Usually long polling is prefered) 
+
+Latency : Time taken to finish a certain operation ,
+
+Throughput : It is the number of operation that are completed within specific time.
+
+
+
