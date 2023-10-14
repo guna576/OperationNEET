@@ -14,4 +14,20 @@ Association : It is of two types 1. UniDirectional (--------->)
 ✔ On top of association we add the type of relation it is as one-one ,one-many,many-one and many-many relation.
 
 
+Other two relationships are aggregation and composition . 
+
+If we have two classes A and B ,
+
+👍 Aggregation is B can exist with A . example : house and person , desktop and monitor  (Has-A relation)
+
+
+
+👍 Composition is B cannot exist without A . example : eye exists in body (and eye cannot exist as seperate entity)  (IS-A relation )
+
+
+But using this relations and identifying them in realtime scenario  is the most important part in an interview.
+
+
+
+
 
