@@ -1,0 +1,17 @@
+A low level design diagram is bulit using classes and the relationship between classes.
+
+In case of hld (high level design) diagram no need to give complete details about a class .we can have only a classname in a rectangular box.
+A class is reprsented as a rectangle with attributes and functions.
+
+Along with attributes we need to specify the visibility of the class varaibles .
+types of visibility for the attributes :  private (-) , public (+) , protected (#)
+
+types of relationships:
+
+Association : It is of two types 1. UniDirectional (--------->)
+                                 2. BiDirectional  (----------)
+
+✔ On top of association we add the type of relation it is as one-one ,one-many,many-one and many-many relation.
+
+
+
