@@ -1,0 +1,30 @@
+SINGLETON PATTERN : Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+
+All implementations of the Singleton have these two steps in common:
+
+Make the default constructor private, to prevent other objects from using the new operator with the Singleton class.
+Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field. All following calls to this method return the cached object.
+
+
+CODE FOR REFERENCE :
+
+PYTHON : 
+
+class Singleton(object):
+
+    def __new__(cls):
+        if not hasattr(cls,'instance'):
+            cls.instance=super(Singleton,cls).__new__(cls)
+        return cls.instance
+    
+s1=Singleton()
+s2=Singleton()
+
+if(s1 is s2):
+    print("same instances")
+if(s1==s2):
+    print("yes they are equal")
+else:
+    print("they are different instances")
+
+For Reference : https://refactoring.guru/design-patterns
