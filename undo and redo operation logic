@@ -1,0 +1,3 @@
+How will you implement undo and redo option using the data structure? 
+
+maintain two stacks for undo and redo .undo opertion just stores all the objects once they are occured.redo stacks stores all the objects after performing the undo operations. 
