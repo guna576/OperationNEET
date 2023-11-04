@@ -5,7 +5,7 @@ import time
 import gradio as gr
 
 openai.api_key = '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'
-def get_completion(prompt="", model="gpt-3.5-turbo"):
+def get_chatgpt_completion(prompt="", model="gpt-3.5-turbo"):
     try:
         messages = [{"role": "user", "content": "Hi, AI"}]
         response = openai.ChatCompletion.create(
