@@ -1,0 +1,102 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Group {
+  group_id integer
+ organiser_id integer
+ group_status boolean
+}
+
+Table Auction{
+  auction_id integer
+  crated_date date
+   end_date date 
+   group_id integer
+   organizer_id integer 
+   winner_id integer(equal to user_id)
+   winner_type varchar
+   winner_amount integer
+   
+}
+
+Table Users {
+  user_id integer [primary key]
+}
+
+Table Invite{
+  user_id integer
+  group_id gid
+  organizer_id integer
+  user_group_status boolean
+
+}
+
+Table Organiser {
+ 
+  organiser_id integer
+  //group_list integer
+}
+Table Payments{
+  payment_id integer [primary key]
+  payment_mode varchar
+  payment_status boolean
+  user_id integer
+  Payment_date TimeStamp
+
+}
+
+Table Group_Users{
+ group_id integer
+ user_id integer
+}
+
+Table Group_Auction{
+  group_id integer
+  auction_id integer
+}
+
+Table User_Auction_Payment{
+  user_id integer
+  auction_id integer
+  payment_id integer
+}
+
+Table User_Payment{
+  user_id integer
+  payment_id integer
+}
+
+Ref: Group_Users.group_id > Group.group_id 
+
+Ref: Group_Users.user_id > Users.user_id
+
+Ref: Organiser.organiser_id > Group.group_id
+
+
+Ref: Group_Auction.auction_id > Auction.auction_id 
+
+Ref: Group_Auction.group_id  > Group.group_id
+
+Ref: User_Auction_Payment.user_id >  Users.user_id 
+
+Ref: User_Auction_Payment.auction_id >  Auction.auction_id
+
+Ref: User_Auction_Payment.payment_id >  Payments.payment_id
+
+Ref: User_Payment.payment_id >  Payments.payment_id
+
+Ref: User_Payment.user_id > Users.user_id
+
+Ref: Users.user_id < Invite.user_id
+
+Ref: Group.group_id < Invite.user_id
+
+Ref: Organiser.organiser_id < Invite.user_id
+
+// Ref: posts.user_id > users.id // many-to-one
+
+// Ref: users.id < follows.following_user_id
+
+// Ref: users.id < follows.followed_user_id
+
+
