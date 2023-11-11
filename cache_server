@@ -1,0 +1,57 @@
+https://medium.com/@animeshblog/consistent-hashing-d23379273ade
+
+this blog is helpful to get good understanding of cache_server.
+
+MY code for hasing techinque :
+
+class cacheServer:
+    def __init__(self,server_id):
+        self.server_id=server_id
+        self.cache={}
+
+class distributeserver:
+    def __init__(self,noofservers):
+        self.nos=noofservers
+        self.server=[cacheServer(i) for i in range(self.nos)]
+
+    def hash_function(self,key):
+       
+        hash_value=0
+        for i in range(len(key)):
+            hash_value+=ord(key[i])*i
+        return hash_value%self.nos
+
+    def get_server(self, key):
+        hashval= self.hash_function(key)
+        return self.server[hashval]
+
+    def insert(self,key,value):
+        server=self.get_server(key)
+        server.cache[key]=value
+
+    def get(self,key):
+        server_ind=self.hash_function(key)
+        curr_server=self.server[server_ind]
+        if key in curr_server.cache:
+            return curr_server.cache[key]
+    
+if __name__=="__main__":
+    n=3
+    cur=distributeserver(3)
+    data = [('smit', 30), ('keerthi', 27), ('Jhon', 25), ('Dave', 16), ('Pavan', 24)] # Data can be change in future
+
+    # ('smit', 30) --> hashvalue 
+
+    #  hashvalue --> return
+
+    # <'student' Ox78877>, <'student' Oxt770>
+    for i in data:
+        key,val=i
+        cur.insert(key,value)
+
+    print(cur.get('kumar'))
+
+
+
+
+
