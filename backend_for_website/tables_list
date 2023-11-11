@@ -66,6 +66,8 @@ Table User_Payment{
   payment_id integer
 }
 
+>(one to many relations)
+
 Ref: Group_Users.group_id > Group.group_id 
 
 Ref: Group_Users.user_id > Users.user_id
